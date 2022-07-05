@@ -30,6 +30,10 @@ module.exports = {
       },
       colors: {
         primary: 'rgb(22, 24, 35)',
+        blackBg: '#111314',
+        blackBgLight: '#1A1C1E',
+        pinkBg: '#FB627D',
+        pinkBgDark: '#BA4A5D',
       },
       height: {
         '88vh': '88vh',

@@ -2,6 +2,7 @@ import { SanityAssetDocument } from '@sanity/client';
 import React, { useState } from 'react'
 import { FaCloudUploadAlt } from 'react-icons/fa';
 import { client } from '../utils/client';
+import { topics } from '../utils/constants';
 
 const upload = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -98,6 +99,43 @@ const upload = () => {
             </div>
             <div className='flex flex-col gap-3 pb-10'>
                     <label className='text-md font-medium'>Caption</label>
+                    <input 
+                        type='text'
+                        value=""
+                        onChange={()=>{}}
+                        className="rounded outline-none text-md border-2 border-gray-200 p-2 bg-blackBgLight"
+                    />
+                    <label className='text-md font-medium'>Choose a Category</label>
+                    <select
+                        onChange={()=>{}}
+                        className="bg-blackBgLight outline-none border-2 border-gray-200 text-md capitalize p-2 lg:p-4 rounded cursor-pointer" 
+                    >
+                        {topics.map((topic)=>(
+                            <option
+                                key={topic.name}
+                                value={topic.name}
+                                className='outline-none capitalize bg-blackBg text-md p-2 hover:bg-blackBgLight'
+                            >
+                                {topic.name}
+                            </option>
+                        ))}
+                    </select>
+                    <div className='flex gap-6 mt-10 '>
+                        <button
+                            onClick={()=>{}}
+                            type='button'
+                            className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                        >
+                            Discard
+                        </button>
+                        <button
+                            onClick={()=>{}}
+                            type='button'
+                            className='bg-pinkBg text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                        >
+                            Post
+                        </button>
+                    </div>
             </div>
         </div>
     </div>

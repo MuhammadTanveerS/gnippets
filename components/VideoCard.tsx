@@ -27,6 +27,9 @@ const VideoCard: NextPage<IProps>  = ({post}) => {
     }
   }
 
+  console.log("postedBy");
+  console.log(post.postedBy);
+  
   return (
     <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
       <div>

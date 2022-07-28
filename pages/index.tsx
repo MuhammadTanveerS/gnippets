@@ -9,6 +9,7 @@ interface IProps {
 }
 
 const Home = ({videos}: IProps) => {
+  console.log("videos");
   console.log(videos);
   
 
